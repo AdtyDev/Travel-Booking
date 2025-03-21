@@ -1,0 +1,180 @@
+/* Bookings Container */
+.bookings-container {
+    max-width: 800px; /* Increased width */
+    width: 90%;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Booking List */
+.bookings-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* Booking Item */
+.booking-item {
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    flex-wrap: wrap;
+}
+
+/* Booking Details */
+.booking-details {
+    flex: 3;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0 15px;
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: nowrap; /* Ensures Date stays in one line */
+}
+
+/* Buttons Wrapper */
+.booking-actions {
+    flex: 1;
+    display: flex;
+    gap: 15px;  /* Added proper spacing */
+    justify-content: flex-end;
+}
+
+/* Buttons */
+button {
+    padding: 10px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    min-width: 80px; /* Ensures consistent button size */
+}
+
+.edit-btn {
+    background-color: #000000;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #dc3535;
+    color: white;
+}
+
+.update-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.cancel-btn {
+    background-color: #6c757d;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Edit Mode - Expands the booking item */
+.booking-item.edit-mode {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    padding: 15px;
+}
+
+/* Edit Form */
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Edit Form Inputs */
+.edit-form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    background: white;
+}
+
+/* Buttons for Editing */
+.edit-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.save-btn, .cancel-btn {
+    flex: 1;
+    padding: 10px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 600px) {
+    .bookings-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .booking-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .booking-details {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .booking-actions {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    button {
+        width: 48%;
+        text-align: center;
+    }
+
+    /* Edit Form on Mobile */
+    .edit-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .save-btn, .cancel-btn {
+        width: 100%;
+    }
+}
